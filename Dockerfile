@@ -4,11 +4,11 @@ WORKDIR /demodocker-app
 
 COPY . .
 
+RUN npm install tar@latest 
+
 RUN npm install
 
 RUN npm run build 
-
-RUN npm install tar@latest
 
 FROM nginx:1.18.0
 
